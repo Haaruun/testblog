@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practise</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+  
+</head>
+<body>
+
+	<div class="nave">
+		<ul>
+		<li><%= link_to("Home", {:controller => 'welcome', :action => 'hello'})%></li>
+		<li><%= link_to("Posts", {:controller => 'blogs', :action => 'index'})%></li>
+		<li><%= link_to("New", controller: 'blogs', action: 'new')%></li>
+		<li><%= link_to("About", {:controller => 'messages', :action => 'new'})%></li>
+	</ul>
+	</div>
+
+<nav>
+	<ul>
+		<li><%= link_to("Home", {:controller => 'welcome', :action => 'hello'})%></li>
+		<li><%= link_to("Posts", {:controller => 'blogs', :action => 'index'})%></li>
+		<li><%= link_to("New", {:controller => 'blogs', :action => 'new'})%></li>
+		<li><%= link_to("About", {:controller => 'messages', :action => 'new'})%></li>
+	</ul>
+</nav>
+ <br>
+ <br>
+<div class="center">
+<% if current_user %>
+Logged in as <%= current_user.email %>
+<%= link_to("Log Out", session_path("current"), method: "delete") %>
+<% else %>
+<p><%= link_to("Sign Up", new_user_path) %> or</p>
+<p><%= link_to("Log In", new_session_path) %></p>
+<% end %>
+<%= yield %>
+</div>
+
+
+
+</body>
+</html>

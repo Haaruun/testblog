@@ -1,0 +1,383 @@
+// Place all the styles related to the Blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nave{
+  background-color: #2c3e50;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+    // box-shadow: 0 0.5px 2px rgb(1,1,1);
+    ul{
+      height: 50px;
+      margin: 0;
+      margin-left: 100px; 
+      width: 100%;
+
+    li{
+    display: block;
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    a{
+      color: white;
+      text-decoration: none;
+    }
+
+    }
+
+}
+}
+
+$color: #1abc9c;
+
+body{
+	background-color: whitesmoke;
+	margin: 0;
+	padding: 0;
+  font-family: helvetica;
+}
+
+// #masonry-container {
+//   background: whitesmoke;
+//   padding: 5px;
+//   margin-bottom: 20px;
+//   border-radius: 5px;
+//   clear: both;
+//   -webkit-border-radius: 5px;
+//      -moz-border-radius: 5px;
+//           border-radius: 5px;
+          
+//           div{
+// 			background-color: white;
+// 			border-radius: 0;
+// 			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+
+//           }
+// }
+
+// .clearfix:before, .clearfix:after { content: ""; display: table; }
+// .clearfix:after { clear: both; }
+// .clearfix { zoom: 1; }
+
+
+// .col1 { width: 80px; }
+// .col2 { width: 180px; }
+// .col3 { width: 180px; }
+// .col4 { width: 380px; }
+// .col5 { width: 480px; }
+
+// .col1 img { max-width: 80px; }
+// .col2 img { max-width: 180px; }
+// .col3 img { max-width: 280px; }
+// .col4 img { max-width: 380px; }
+// .col5 img { max-width: 480px; }
+
+
+// .centered { margin: 0 auto; }
+
+
+
+
+
+
+h1, input::-webkit-input-placeholder, button {
+  font-family: 'roboto', sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+input{
+  margin: 40px 25px;
+  width: 200px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px $color;
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $color 4%);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: darken($color, 20%);
+  &:focus, &:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+   
+  }
+}
+
+ 	input:focus::-webkit-input-placeholder{
+      color: $color;
+      font-size: 11px;
+      transform: translateY(-30px);
+      visibility: visible !important;
+      transition: 0.2s ease all;
+    }
+
+
+
+.follow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50px;
+  background: #03A9F4;
+  display: inline-block;
+  margin: 50px calc(50% - 21px);
+  white-space: nowrap;
+  padding: 13px;
+  box-sizing: border-box;
+  color: white;
+  transition: all 0.2s ease;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 5px 6px 0 rgba(0,0,0,0.2);
+  i {
+    margin-right: 20px;
+    transition: margin-right 0.2s ease;
+  }
+  &:hover {
+    width: 134px;
+    transform: translateX(-50px);
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+
+.textarea{
+  margin: 40px 25px;
+  width: 600px;
+  height: 200px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px $color;
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $color 4%);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: darken($color, 20%);
+}
+
+.textarea:focus::-webkit-input-placeholder{
+      color: $color;
+      font-size: 11px;
+      transform: translateY(-30px);
+      visibility: visible !important;
+      transition: 0.2s ease all;
+      border: 2px solid $color;
+    }
+
+
+    .textarea:focus, input:focus{
+    outline: 0;
+}
+
+
+.button {
+  border: none;
+  background: $color;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  color: white;
+  margin-left: 25px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+  &:hover { 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+  }
+}
+
+.h1 {
+  height: 100px;
+  width: 100%;
+  font-size: 18px;
+  background: darken($color, 4%);
+  color: white;
+  line-height: 150%;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+form {
+ padding: 30px;
+ margin: 0 auto;
+}
+
+
+
+// Nav//
+
+nav{
+ position: fixed;
+  left: 0px;
+  bottom: 0px;
+  top: 50px;
+  z-index: 0;
+  width: 100px;
+  padding: 30px;
+  background-color: #2c3e50;
+  transition: 0.5s ease all;
+  height: 100vh;
+  box-shadow: 2px 0px 3px rgb(1,1,30);
+
+
+
+
+  ul{
+   list-style-type: none;
+    li{
+      color: white;
+  font-family: helvetica;
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-smoothing: antialiasing;
+
+  a{
+    color: white;
+    cursor: pointer;
+text-decoration: none;
+  }
+    }
+  }
+}
+
+.center{
+  margin-left: 170px;
+}
+
+@media screen and (max-width: 780px) {
+  nav{
+    width: 100%;
+    height: 50px;
+    transition: 0.2s ease all;
+    padding: 0px;
+    position: absolute;
+    overflow: hidden;
+
+   
+
+    ul{
+      height: 50px;
+      margin: 0;
+      margin-left: -40px; 
+      width: 100%;
+
+    li{
+    display: block;
+    float: left;
+    width: 25%;
+    background-color: #2c3e50;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    }
+  }
+  }
+
+  .center{
+  margin-top: 80px;
+  margin-left: 10px;
+}
+
+form {
+ padding: 0px;
+ margin: 0 auto;
+}
+}
+
+// .img{
+  
+//   img{
+    
+//   }
+// }
+
+
+.wrapper{
+   margin: 0 auto;
+  max-width: 90%;
+  display: flex;
+  flex-flow: row wrap; 
+
+
+}
+
+.flex{
+  flex: 1;
+  background-color: white;
+  color: #333;
+  min-width: 300px;
+  margin: 10px;
+  height: 400px;
+  overflow: hidden;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   transition: 2s ease all;
+}
+
+.flex:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   transition: 0.5s ease all;
+}
+
+.flex>img{
+   height: auto;
+  width: 100%;
+  margin: 0;
+}
+
+.flex > p{
+  padding: 10px;
+}
+
+
+
+
+dialog{
+    background-color: whitesmoke;
+    border: none;
+    height: 600px;
+    width: 900px;
+    position: fixed;
+    /* opacity: 0; */
+    top: -600px;
+  
+}
+
+.see{
+     /* opacity: 1; */
+    top: 40px;
+    transition: 1s ease all;
+}
+
+
+
+dialog::backdrop{
+    background: rgba(5, 5, 5, 0.7);
+    transition: 1s ease all;
+}
+
+.modalClose{
+  font-size: 2.5em;
+  cursor: pointer;
+  position: absolute;
+  top: -30px;
+}
+

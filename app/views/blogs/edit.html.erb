@@ -1,0 +1,25 @@
+<h1>Edit Post</h1>
+
+<%= form_for(:blog, :url => {:action => 'update', :id => @blog.id}) do |f| %>
+
+<%= f.label (:name)%>
+<br>
+<%= f.text_field (:name) %>
+<br>
+<br>
+
+<%= f.label (:title)%>
+<br>
+<%= f.text_field (:title) %>
+<br>
+<br>
+
+<%= f.label (:description)%>
+<br>
+<%= f.text_field (:description) %>
+<br>
+<br>
+
+<%= submit_tag("Update Post") %>
+
+<% end %>

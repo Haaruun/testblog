@@ -1,0 +1,29 @@
+<h1>My name is Haaruun</h1>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo dignissimos totam perspiciatis, ad inventore ab, similique molestias omnis saepe nihil vitae earum hic, temporibus quos. Accusantium, nostrum nemo tenetur dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem id culpa praesentium similique quod! Repudiandae laborum aliquam distinctio amet impedit, veniam voluptates tempora? Cumque doloremque rem eos, hic molestias sequi?</p>
+
+<p class="openModal button">Contact Me</p>
+
+  <dialog id="dialog">
+ 
+    <p class="modalClose">⤬</p>
+<%= form_for @message, url: contact_path do |message_form| %>
+
+    <div class="field">
+      <%= message_form.text_field :name, placeholder: "Name" %>
+    </div>
+    
+    <div class="field">
+      <%= message_form.email_field :email, placeholder: "Email"%>
+    </div>
+    
+    <div class="field">
+      <%= message_form.text_area :content, placeholder: "Message", :class => 'textarea'%>
+    </div>
+  </fieldset>
+      <%= message_form.submit "Send", :class => "button" %>
+ 
+<% end %>
+</dialog>
+
+

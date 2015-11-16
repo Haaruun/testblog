@@ -1,0 +1,19 @@
+<style media="screen">
+  .img {
+   background-image: url(<%= @blog.image %>); 
+	margin-left: -40px;
+	width: 100%;
+  height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+
+</style>
+
+<div class="img"></div>
+
+<h1><%= @blog.name %></h1>
+
+<h5><%= @blog.created_at.strftime("%B %d %Y") %></h5>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora reprehenderit corporis voluptate facilis et iusto praesentium, illum dignissimos. Vel odio nostrum, quos dignissimos veritatis. Dolores ipsum alias, quis velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet animi explicabo veniam ducimus quo provident esse voluptatibus aliquid earum! Odit minus fugiat voluptatibus rem ea. Hic natus quae quisquam sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam error minus accusantium id, numquam. Eveniet dolorum fuga est iure molestias, corrupti ipsa suscipit, nulla voluptatibus officia velit expedita omnis distinctio.</p>

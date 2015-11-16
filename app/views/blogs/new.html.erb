@@ -1,0 +1,31 @@
+
+<%= form_for(:blog, :url => {:action => 'create'}, :html => {multipart: true} ) do |f| %>
+
+
+<%= f.label (:name)%>
+<br>
+<%= f.text_field (:name), :placeholder => "Haaruun" %>
+<br>
+<br>
+
+<%= f.label (:title)%>
+<br>
+<%= f.text_field (:title), :placeholder => "My Title"  %>
+<br>
+<br>
+
+<%= f.label (:description)%>
+<br>
+<%= f.text_area (:description), :placeholder => "My Post", :class => 'ckeditor' %>
+<br>
+<br>
+
+<%= f.label (:image)%>
+<br>
+<%= f.file_field (:image), :placeholder => "My Post", :class => 'button'%>
+<br>
+<br>
+
+<%= submit_tag("Post", :class => 'button') %>
+
+<% end %>

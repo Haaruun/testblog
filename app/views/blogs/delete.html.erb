@@ -1,0 +1,11 @@
+<h1>Delete Post</h1>
+
+<%= form_for(:blog, :url => {:action => 'destroy', :id => @blog.id}) do |f| %>
+
+<%= @blog.name %>
+<br>
+<br>
+
+<%= submit_tag("Delete Post")%>
+
+<% end %>

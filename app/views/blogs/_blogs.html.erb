@@ -1,0 +1,21 @@
+<%= will_paginate @blogs %>
+
+
+<div class="wrapper">
+<% @blogs.each do |blog| %>
+  <div class="flex">
+  	<%= image_tag blog.image_url %>
+   <p><%= blog.name %></p>
+		<p><%= blog.title %></p>
+		<p><%= truncate(blog.description, :length => 20) %></p>
+		<p><%= blog.created_at.strftime("%D") %></p>
+		<p>
+			<%= link_to("Show", {:action => 'show', :id => blog.id}) %>
+			<%= link_to("Edit", {:action => 'edit', :id => blog.id}) %>
+			<%= link_to("Delete", {:action => 'delete', :id => blog.id}) %>
+		</p>
+  </div>
+
+ 
+  <% end %>
+
